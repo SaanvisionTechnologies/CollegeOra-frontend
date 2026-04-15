@@ -1,0 +1,15 @@
+# Default owner for everything
+* @suyashbhatia
+
+# Auth and security-sensitive code — always require review
+src/middleware.ts @suyashbhatia
+src/lib/supabase/ @suyashbhatia
+src/app/auth/ @suyashbhatia
+src/lib/session.ts @suyashbhatia
+
+# Database schema changes — always require review
+prisma/ @suyashbhatia
+sql/ @suyashbhatia
+
+# CI/CD pipeline changes — always require review
+.github/ @suyashbhatia
