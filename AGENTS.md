@@ -1,0 +1,37 @@
+<!-- BEGIN:nextjs-agent-rules -->
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+
+# Agent Instructions
+
+## For All Agents
+- Read CLAUDE.md before starting any work
+- Follow the project conventions described there
+- Never commit directly to main, staging, or develop
+- Always create feature branches: `feature/<issue-number>-<short-description>`
+- Reference the issue number in your PR title and description
+
+## For Developer Agents (implementing stories)
+- Read the full issue before writing any code
+- If ANYTHING is unclear, comment on the issue asking for clarification and STOP
+- Write tests for new functionality
+- Run `npm run lint` and `npm run test` before opening a PR
+- Keep PRs focused — one issue per PR
+
+## For PR Review Agents
+- Focus on correctness, not style (the linter handles style)
+- Only comment on things that matter
+- If the code is good, say so briefly
+
+## For Security Agents
+- Check OWASP Top 10 categories
+- Pay special attention to auth flows and database queries
+- Rate findings by severity: CRITICAL, HIGH, MEDIUM, LOW, INFO
+
+## Using the Knowledge Graph (All Agents)
+- Before exploring the codebase, check `graphify-out/GRAPH_REPORT.md` for architecture context
+- Query `graphify-out/graph.json` for dependency relationships instead of reading dozens of files
+- This saves tokens and gives you a more accurate picture of the codebase structure
+- If the graph is outdated (check the commit date), fall back to reading files directly
